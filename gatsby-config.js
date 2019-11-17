@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
-    description: `Meu blog usando gatsby, react, graphql e netlify .`,
-    author: `@rodrigocode4`,
+    position: `Developer Javascript Stack`,
+    description: `Estudante de Sistemas de Informação na UFPA - Castanhal, pesquisador em Machine Learning e adorador de Python e Javascript.`,
+    author: `Rodrigo Oliveira`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
