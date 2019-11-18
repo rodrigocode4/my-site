@@ -25,8 +25,8 @@ const Profile = () => {
 
   return (
     <S.ProfileWrapper>
-      <Avatar />
       <S.ProfileLink>
+        <Avatar />
         <S.ProfileAuthor>
           {author}
           <S.ProfileProsition>{position}</S.ProfileProsition>
