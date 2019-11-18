@@ -1,13 +1,13 @@
 import React from 'react';
 import Profile from '../Profile';
-import SocialLink from '../SocialLink';
+import SocialLinks from '../SocialLinks';
 import * as S from './styled';
 import MenuLinks from '../MenuLinks';
 
 const Sidebar = () => (
     <S.SidebarWrapper>
         <Profile />
-        <SocialLink />
+        <SocialLinks />
         <MenuLinks />
     </S.SidebarWrapper>
 )
