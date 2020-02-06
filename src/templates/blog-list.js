@@ -33,9 +33,10 @@ const BlogList = (props) => {
                         fields: {
                             slug
                         }
-                    },
-                    }) => (
+                    }
+                    }, i) => (
                             <PostItem
+                                key={i}
                                 slug={slug}
                                 background={background}
                                 color={color}
