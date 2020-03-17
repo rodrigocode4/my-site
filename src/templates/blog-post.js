@@ -1,12 +1,17 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
+import RecommendedPosts from '../components/RecommendedPost';
 
 import * as S from '../components/Post/styled';
 
-const BlogPost = ({ data }) => {
+const BlogPost = ({ data, pageContext }) => {
     const post = data.markdownRemark;
+    const previous = pageContext.previousPost;
+    const next = pageContext.nextPost;
+
 
     return (
         <Layout>
@@ -21,6 +26,7 @@ const BlogPost = ({ data }) => {
             <S.MainContent>
                 <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
             </S.MainContent>
+            <RecommendedPosts previous={previous} next={next}/>
         </Layout>
     )
 }
@@ -36,7 +42,7 @@ export const query = graphql`
             html
             timeToRead
         }
-}
+    }
 
 `
 
