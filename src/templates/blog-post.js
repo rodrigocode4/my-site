@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
-import RecommendedPosts from '../components/RecommendedPost';
+import RecommendedPosts from '../components/RecommendedPosts';
 
 import * as S from '../components/Post/styled';
 
