@@ -6,6 +6,7 @@ const postsQuery = `{
             node {
                     objectID: id
                     frontmatter {
+                        background
                         category
                         date_timestemp: date
                         title
