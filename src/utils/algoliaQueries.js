@@ -1,14 +1,16 @@
-const postsQuery = `{
+const postQuery = `{
     posts: allMarkdownRemark(
         sort: {fields: frontmatter___date, order: DESC}
     ) {
         edges {
             node {
+                    timeToRead
                     objectID: id
                     frontmatter {
                         background
                         category
                         date_timestemp: date
+                        date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
                         title
                         description
                     }
@@ -29,15 +31,15 @@ const flatten = arr => arr.map(({ node: { frontmatter, ...rest }}) => ({
     ...rest
 }))
 
+const settings = { attributesToSnippet: [`excerpt:20`] }
+
 const queries = [
     {
-      query: postsQuery,
+      query: postQuery,
       transformer: ({ data }) => flatten(data.posts.edges), // optional
-      indexName: 'Posts',
-      settings: {
-        attributesToSnippets: ['excerpt:20']
-      }
+      indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME,
+      settings,
     },
 ];
 
-module.exports = queries
+module.exports = queries;
