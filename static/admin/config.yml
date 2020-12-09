@@ -2,6 +2,7 @@ backend:
   name: github
   repo: rodrigocode4/my-site
   branch: master
+  site_domain: rodrigocode4.netlify.com
 
 publish_mode: editorial_workflow
 media_folder: "static/assets/img"
