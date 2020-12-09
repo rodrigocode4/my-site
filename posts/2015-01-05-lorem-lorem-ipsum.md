@@ -1,9 +1,10 @@
 ---
-date: 2015-01-05 05:54:23
 title: Lorem lorem ipsum
 description: And I'm lorem sure lorem
+date: 2015-01-05 05:54:23
 category: JS
 background: "#d6ba32"
+thumbnail: assets/img/cover.png
 ---
 
 # Lorem ipsum
