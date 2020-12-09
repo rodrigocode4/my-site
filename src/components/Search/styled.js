@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
 export const SearchWrapper = styled.section`
   background: #16202c;

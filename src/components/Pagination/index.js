@@ -1,8 +1,8 @@
-import React from 'react'
-import propTypes from 'prop-types'
-import { Link } from 'gatsby'
+import React from "react"
+import propTypes from "prop-types"
+import { Link } from "gatsby"
 
-import * as S from './styled'
+import * as S from "./styled"
 
 const Pagination = ({
   isFirst,
@@ -30,4 +30,4 @@ Pagination.propTypes = {
   nextPage: propTypes.string,
 }
 
-export default Pagination;
+export default Pagination

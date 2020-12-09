@@ -1,27 +1,24 @@
-import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby'
-import Avatar from '../Avatar';
-import * as S from './styled';
+import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import Avatar from "../Avatar"
+import * as S from "./styled"
 
 const Profile = () => {
   const {
     site: {
-      siteMetadata: {
-        author, position, description
-      }
-    }
+      siteMetadata: { author, position, description },
+    },
   } = useStaticQuery(graphql`
     query MysiteMetadata {
-        site {
-          siteMetadata {
-            author
-            position
-            description
-          }
+      site {
+        siteMetadata {
+          author
+          position
+          description
         }
       }
-      
-    `)
+    }
+  `)
 
   return (
     <S.ProfileWrapper>
@@ -37,4 +34,4 @@ const Profile = () => {
   )
 }
 
-export default Profile;
+export default Profile

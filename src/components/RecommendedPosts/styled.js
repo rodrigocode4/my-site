@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { Link } from 'gatsby'
+import styled from "styled-components"
+import { Link } from "gatsby"
 
 export const RecommendedWrapper = styled.section`
   border-bottom: 1px solid #38444d;
