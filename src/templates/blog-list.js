@@ -5,6 +5,7 @@ import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 import PostItem from "../components/PostItem"
 import Pagination from "../components/Pagination"
+import * as S from '../components/ListWrapper/styled'
 
 const BlogList = props => {
   const postList = props.data.allMarkdownRemark.edges
@@ -18,37 +19,39 @@ const BlogList = props => {
   return (
     <Layout>
       <SEO title="Home" />
-      {postList.map(
-        (
-          {
-            node: {
-              frontmatter: {
-                background,
-                category,
-                date,
-                title,
-                description,
-                color,
+      <S.ListWrapper>
+        {postList.map(
+          (
+            {
+              node: {
+                frontmatter: {
+                  background,
+                  category,
+                  date,
+                  title,
+                  description,
+                  color,
+                },
+                timeToRead,
+                fields: { slug },
               },
-              timeToRead,
-              fields: { slug },
             },
-          },
-          i,
-        ) => (
-          <PostItem
-            key={i}
-            slug={slug}
-            background={background}
-            color={color}
-            category={category}
-            date={date}
-            timeToRead={timeToRead}
-            title={title}
-            description={description}
-          />
-        ),
-      )}
+            i,
+          ) => (
+            <PostItem
+              key={i}
+              slug={slug}
+              background={background}
+              color={color}
+              category={category}
+              date={date}
+              timeToRead={timeToRead}
+              title={title}
+              description={description}
+            />
+          ),
+        )}
+      </S.ListWrapper>
       <Pagination
         isFirst={isFirst}
         isLast={isLast}
