@@ -29,7 +29,7 @@ const Profile = () => {
           <S.ProfileProsition>{position}</S.ProfileProsition>
         </S.ProfileAuthor>
       </S.ProfileLink>
-      <p>{description}</p>
+      <S.ProfileDescription>{description}</S.ProfileDescription>
     </S.ProfileWrapper>
   )
 }
