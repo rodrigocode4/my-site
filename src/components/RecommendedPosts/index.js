@@ -20,20 +20,20 @@ const RecommendedPosts = ({ previous, next }) => (
 RecommendedPosts.propTypes = {
   previous: propTypes.shape({
     frontmatter: propTypes.shape({
-      title: propTypes.string.isRequired,
+      title: propTypes.string.isRequired
     }),
     fields: propTypes.shape({
-      slug: propTypes.string.isRequired,
-    }),
+      slug: propTypes.string.isRequired
+    })
   }),
   next: propTypes.shape({
     frontmatter: propTypes.shape({
-      title: propTypes.string.isRequired,
+      title: propTypes.string.isRequired
     }),
     fields: propTypes.shape({
-      slug: propTypes.string.isRequired,
-    }),
-  }),
+      slug: propTypes.string.isRequired
+    })
+  })
 }
 
 export default RecommendedPosts

@@ -5,7 +5,7 @@ import { Instagram } from "styled-icons/fa-brands/Instagram"
 const Icons = {
   Twitter,
   Github,
-  Instagram,
+  Instagram
 }
 
 export default Icons

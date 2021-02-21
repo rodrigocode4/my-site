@@ -10,7 +10,7 @@ const PostItem = ({
   date,
   timeToRead,
   title,
-  description,
+  description
 }) => (
   <S.PostItemLink to={slug}>
     <S.PostItemWrapper>
@@ -36,7 +36,7 @@ PostItem.propTypes = {
   date: PropTypes.string.isRequired,
   timeToRead: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired
 }
 
 export default PostItem

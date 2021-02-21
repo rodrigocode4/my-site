@@ -23,13 +23,13 @@ const postQuery = `{
     }
 }`
 
-const flatten = arr =>
+const flatten = (arr) =>
   arr.map(({ node: { frontmatter, ...rest } }) => ({
     ...frontmatter,
     date_timestemp: parseInt(
-      (new Date(frontmatter.date_timestemp).getTime() / 1000).toFixed(0),
+      (new Date(frontmatter.date_timestemp).getTime() / 1000).toFixed(0)
     ),
-    ...rest,
+    ...rest
   }))
 
 const settings = { attributesToSnippet: [`excerpt:20`] }
@@ -39,8 +39,8 @@ const queries = [
     query: postQuery,
     transformer: ({ data }) => flatten(data.posts.edges), // optional
     indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME,
-    settings,
-  },
+    settings
+  }
 ]
 
 module.exports = queries

@@ -7,7 +7,7 @@ module.exports = {
     title: `Gatsby Default Starter`,
     position: `Developer Javascript Stack`,
     description: `Estudante de Sistemas de Informação na UFPA - Castanhal, pesquisador em Machine Learning e adorador de Python e Javascript.`,
-    author: `Rodrigo Oliveira`,
+    author: `Rodrigo Oliveira`
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -17,22 +17,22 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `uploads`,
-        path: `${__dirname}/static/assets/img`,
-      },
+        path: `${__dirname}/static/assets/img`
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
-      },
+        path: `${__dirname}/src/images`
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `posts`,
-        path: `${__dirname}/posts`,
-      },
+        path: `${__dirname}/posts`
+      }
     },
     {
       resolve: `gatsby-transformer-remark`,
@@ -41,20 +41,20 @@ module.exports = {
           {
             resolve: `gatsby-remark-relative-images`,
             options: {
-              name: `uploads`,
-            },
+              name: `uploads`
+            }
           },
           {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 960,
-              linkImagesToOriginal: false,
-            },
+              linkImagesToOriginal: false
+            }
           },
           `gatsby-remark-lazy-load`,
-          `gatsby-remark-prismjs`,
-        ],
-      },
+          `gatsby-remark-prismjs`
+        ]
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -66,8 +66,8 @@ module.exports = {
         indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME,
         queries,
         chunkSize: 10000,
-        enablePartialUpdates: true,
-      },
+        enablePartialUpdates: true
+      }
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -78,12 +78,12 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-      },
+        icon: `src/images/gatsby-icon.png` // This path is relative to the root of the site.
+      }
     },
-    `gatsby-plugin-netlify-cms`,
+    `gatsby-plugin-netlify-cms`
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-  ],
+  ]
 }

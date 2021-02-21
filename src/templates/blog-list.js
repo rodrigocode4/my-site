@@ -7,7 +7,7 @@ import PostItem from "../components/PostItem"
 import Pagination from "../components/Pagination"
 import * as S from "../components/ListWrapper/styled"
 
-const BlogList = props => {
+const BlogList = (props) => {
   const postList = props.data.allMarkdownRemark.edges
 
   const { currentPage, numPages } = props.pageContext
@@ -30,13 +30,13 @@ const BlogList = props => {
                   date,
                   title,
                   description,
-                  color,
+                  color
                 },
                 timeToRead,
-                fields: { slug },
-              },
+                fields: { slug }
+              }
             },
-            i,
+            i
           ) => (
             <PostItem
               key={i}
@@ -49,7 +49,7 @@ const BlogList = props => {
               title={title}
               description={description}
             />
-          ),
+          )
         )}
       </S.ListWrapper>
       <Pagination

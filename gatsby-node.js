@@ -9,14 +9,14 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     const slug = createFilePath({
       node,
       getNode,
-      basePath: "pages",
+      basePath: "pages"
     })
 
     // Creates new query'able field with name of 'slug'
     createNodeField({
       node,
       name: "slug",
-      value: `/${slug.slice(12)}`,
+      value: `/${slug.slice(12)}`
     })
   }
 }
@@ -61,7 +61,7 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     }
-  `).then(result => {
+  `).then((result) => {
     const posts = result.data.allMarkdownRemark.edges
     Array.from(posts).forEach(({ node, previous, next }) => {
       createPage({
@@ -70,8 +70,8 @@ exports.createPages = ({ graphql, actions }) => {
         context: {
           slug: node.fields.slug,
           previousPost: next,
-          nextPost: previous,
-        },
+          nextPost: previous
+        }
       })
     })
 
@@ -86,8 +86,8 @@ exports.createPages = ({ graphql, actions }) => {
           limit: postsPerPage,
           skip: index * postsPerPage,
           numPages,
-          currentPage: index + 1,
-        },
+          currentPage: index + 1
+        }
       })
     })
   })

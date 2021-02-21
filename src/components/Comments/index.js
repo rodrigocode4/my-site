@@ -22,7 +22,7 @@ const Comments = ({ title, url }) => {
 
 Comments.propTypes = {
   title: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired
 }
 
 export default Comments
