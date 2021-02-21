@@ -24,7 +24,7 @@ export const RecommendedLink = styled(Link)`
     line-height: 1.3;
     font-size: .9rem;
   `}
-  
+
   &:hover {
     background: var(--borders);
   }

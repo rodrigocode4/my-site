@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import media from "styled-media-query"
 
 export const PostItemLink = styled(Link)`
-  color:var(--texts);
+  color: var(--texts);
   display: flex;
   text-decoration: none;
   &:hover {
@@ -38,7 +38,8 @@ export const PostItemWrapper = styled.section`
 
 export const PostItemTag = styled.div`
   align-items: center;
-  background: ${props => (props.background ? props.background : "var(--highlight)")};
+  background: ${props =>
+    props.background ? props.background : "var(--highlight)"};
   border-radius: 50%;
   color: ${props => (props.color ? props.color : "var(--postColor)")};
   display: flex;

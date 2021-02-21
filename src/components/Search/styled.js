@@ -16,7 +16,7 @@ export const SearchWrapper = styled.section`
   .ais-SearchBox,
   .ais-Stats {
     padding: 0.5rem 3rem;
-    
+
     ${media.lessThan("large")`
         padding: 0.5rem 1rem;
     `}
@@ -29,19 +29,19 @@ export const SearchWrapper = styled.section`
     `}
   }
   .ais-Stats {
-    color:var(--texts);
+    color: var(--texts);
   }
   .ais-SearchBox-input {
     background: none;
     border: none;
     border-bottom: 1px solid var(--borders);
-    color:var(--texts);
+    color: var(--texts);
     display: flex;
     font-size: 1.6rem;
     padding: 0.5rem;
     width: 100%;
     &::placeholder {
-      color:var(--texts);
+      color: var(--texts);
     }
   }
   .ais-SearchBox-submit,
@@ -54,7 +54,7 @@ export const SearchWrapper = styled.section`
       border-bottom: 1px solid var(--borders);
       border-top: 1px solid var(--borders);
       display: grid;
-      grid-area: posts ;
+      grid-area: posts;
       grid-gap: 1px;
       grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
       margin-top: 2rem;

@@ -14,7 +14,8 @@ export default function HTML(props) {
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes} className="dark">
-      <script dangerouslySetInnerHTML={{
+        <script
+          dangerouslySetInnerHTML={{
             __html: `
             (function() {
               window.__onThemeChange = function() {};

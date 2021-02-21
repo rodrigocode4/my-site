@@ -122,7 +122,7 @@ export const MainContent = styled.section`
     padding: 0 1.875rem;
     margin: 3.125rem auto;
 
-    ${media.lessThan('large')`
+    ${media.lessThan("large")`
       margin-left: 1rem;
     `}
   }

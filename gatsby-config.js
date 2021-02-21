@@ -1,6 +1,6 @@
-require('dotenv').config()
+require("dotenv").config()
 
-const queries = require('./src/utils/algoliaQueries')
+const queries = require("./src/utils/algoliaQueries")
 
 module.exports = {
   siteMetadata: {
@@ -42,17 +42,17 @@ module.exports = {
             resolve: `gatsby-remark-relative-images`,
             options: {
               name: `uploads`,
-            }
+            },
           },
           {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 960,
-              linkImagesToOriginal: false
-            }
+              linkImagesToOriginal: false,
+            },
           },
           `gatsby-remark-lazy-load`,
-          `gatsby-remark-prismjs`
+          `gatsby-remark-prismjs`,
         ],
       },
     },
@@ -63,7 +63,7 @@ module.exports = {
       options: {
         appId: process.env.GATSBY_ALGOLIA_APP_ID,
         apiKey: process.env.ALGOLIA_ADMIN_KEY,
-        indexName:  process.env.GATSBY_ALGOLIA_INDEX_NAME,
+        indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME,
         queries,
         chunkSize: 10000,
         enablePartialUpdates: true,
@@ -81,7 +81,7 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-netlify-cms`
+    `gatsby-plugin-netlify-cms`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

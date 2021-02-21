@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import media from "styled-media-query"
 
 export const ProfileWrapper = styled.section`
-  color:var(--texts);
+  color: var(--texts);
   display: flex;
   flex-direction: column;
 `

@@ -4,18 +4,18 @@ import { Search } from "styled-icons/fa-solid/Search"
 import { UpArrowAlt as UpArrow } from "styled-icons/boxicons-regular/UpArrowAlt"
 import { Lightbulb as Light } from "styled-icons/remix-line/Lightbulb"
 import { Grid } from "styled-icons/boxicons-solid/Grid"
-import { List } from 'styled-icons/fa-solid/List';
+import { List } from "styled-icons/fa-solid/List"
 
 import * as S from "./styled"
 
-const MenuBar = () =>  {
-  const [ theme, setTheme ] = useState(null)
-  const [ display, setDisplay ] = useState(null)
-   
-  const isDarkMode = theme === 'dark'
-  const isListMode = display === 'list'
+const MenuBar = () => {
+  const [theme, setTheme] = useState(null)
+  const [display, setDisplay] = useState(null)
 
-  useEffect(()=> {
+  const isDarkMode = theme === "dark"
+  const isListMode = display === "list"
+
+  useEffect(() => {
     setTheme(window.__theme)
     setDisplay(window.__display)
 
@@ -38,23 +38,23 @@ const MenuBar = () =>  {
         </S.MenuBarLink>
       </S.MenuBarGroup>
       <S.MenuBarGroup>
-        <S.MenuBarItem 
+        <S.MenuBarItem
           className={theme}
-          title="Mudar tema" 
+          title="Mudar tema"
           onClick={() => {
-            window.__setPreferredTheme(isDarkMode ? 'light' : 'dark')
+            window.__setPreferredTheme(isDarkMode ? "light" : "dark")
           }}
         >
           <Light />
         </S.MenuBarItem>
-        <S.MenuBarItem 
+        <S.MenuBarItem
           className="display"
           title="Mudar visualização"
           onClick={() => {
-            window.__setPreferredDisplay(isListMode ? 'grid' : 'list')
+            window.__setPreferredDisplay(isListMode ? "grid" : "list")
           }}
         >
-           { isListMode ? <Grid /> : <List />}
+          {isListMode ? <Grid /> : <List />}
         </S.MenuBarItem>
         <S.MenuBarItem title="Ir para o topo">
           <UpArrow />
