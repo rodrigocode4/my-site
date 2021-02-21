@@ -10,6 +10,7 @@ module.exports = {
     author: `Rodrigo Oliveira`
   },
   plugins: [
+    `gatsby-plugin-transition-link`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     //deve ser primeiro para funcionar o gatsby-remark-images
