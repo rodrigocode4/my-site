@@ -1,7 +1,8 @@
 backend:
-  name: git-gateway
+  name: github
   repo: rodrigocode4/my-site
   branch: cms
+  base_url: https://netlify-cms.adrianub.vercel.app
   #site_domain: rodrigocode4.netlify.com
 
 publish_mode: editorial_workflow
