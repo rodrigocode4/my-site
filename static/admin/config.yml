@@ -2,7 +2,6 @@ backend:
   name: github
   repo: rodrigocode4/my-site
   branch: cms
-  base_url: https://my-site-git-cms-rodrigocode4.vercel.app/
   #site_domain: rodrigocode4.netlify.com
 
 publish_mode: editorial_workflow
