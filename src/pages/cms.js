@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from "react"
+import { Report } from "styled-icons/boxicons-solid"
 
-const config = {
+/* const config = {
   cms_manual_init: true,
   backend: {
     name: "github",
@@ -37,7 +38,7 @@ const CMS = lazy(
     import("netlify-cms-app").then((cms) => {
       cms.init({ config })
     }),
-  { ssr: false }
+  { ssr: true }
 )
 
 const Rodrigo = () => (
@@ -46,4 +47,7 @@ const Rodrigo = () => (
   </Suspense>
 )
 
-export default Rodrigo
+export default Rodrigo */
+export default function A() {
+  return <h1> aaa</h1>
+}

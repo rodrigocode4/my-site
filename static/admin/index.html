@@ -2,31 +2,20 @@
 <html>
 <head>
   <title>A static website</title>
-
-  <!-- include the widget -->
+  
   <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
-  <!-- Add a menu:
-   Log in / Sign up - when the user is not logged in
-   Username / Log out - when the user is logged in
-  -->
-  <div data-netlify-identity-menu></div>
 
-  <!-- Add a simpler button:
-    Simple button that will open the modal.
-  -->
-  <div data-netlify-identity-button>Login with Netlify Identity</div>
-  <script>
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin";
-          });
-        }
-      });
-    }
-  </script>
+    <!-- Add these scripts to the bottom of the body -->
+    <script src="https://unpkg.com/react@^16/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@^16/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/netlify-cms-app/dist/netlify-cms-app.js"></script>
+    
+    <!-- Initialize the CMS -->
+    <script>
+      NetlifyCmsApp.init();
+    </script>
+
 </body>
 </html>
