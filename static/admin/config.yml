@@ -1,5 +1,5 @@
 backend:
-  name: github
+  name: git-gateway
   repo: rodrigocode4/my-site
   branch: cms
   #site_domain: rodrigocode4.netlify.com
