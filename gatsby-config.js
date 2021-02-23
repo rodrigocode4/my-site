@@ -4,7 +4,7 @@ const queries = require("./src/utils/algoliaQueries")
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `Rodrigo Oliveira | rodrigocode4`,
     position: `Developer Javascript Stack`,
     description: `Estudante de Sistemas de Informação na UFPA - Castanhal, pesquisador em Machine Learning e adorador de Python e Javascript.`,
     author: `Rodrigo Oliveira`,
@@ -74,18 +74,19 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Rodrigo Oliveira`,
+        short_name: `@rodrigocode4`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `var(--background)`,
+        theme_color: `var(--background)`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png` // This path is relative to the root of the site.
       }
     },
-    `gatsby-plugin-netlify-cms`
+    `gatsby-plugin-netlify-cms`,
+    `gatsby-plugin-sitemap`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`
   ]
 }
