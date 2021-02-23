@@ -5,6 +5,7 @@ description: Algumas razões para você ter sua própria plataforma ao invés de
 category: JS
 background: "#7AAB"
 color: "#999"
+image: "/assets/img/lake.jpg"
 ---
 
 # Lorem ipsum

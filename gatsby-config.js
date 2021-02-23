@@ -7,7 +7,8 @@ module.exports = {
     title: `Gatsby Default Starter`,
     position: `Developer Javascript Stack`,
     description: `Estudante de Sistemas de Informação na UFPA - Castanhal, pesquisador em Machine Learning e adorador de Python e Javascript.`,
-    author: `Rodrigo Oliveira`
+    author: `Rodrigo Oliveira`,
+    siteUrl: `https://rodrigocode4.com.br`
   },
   plugins: [
     `gatsby-plugin-transition-link`,
